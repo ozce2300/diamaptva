@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="js/main.js" type="module"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="index.html">SASS</a></h1>
+        <!-- Meny knapp för att öppna mobilmenyn-->
+        <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+            <span class="menu-text">Meny</span>
+        </button>
+        <!-- navigering -->
+        <nav id="nav-menu">
+            <!-- Knapp som visas om mobilmenyn är utfälld -->
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">Stäng</span>
+            </button>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="sass.html"><u>Sass</u></a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a href="diagram.html">Diagram</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Sass</h2>
+        <p>
+
+            Jag blev inte helt förtjust i sass helt ärligt, enda positiva känslan jag fick var av nestingen. 
+            Men allt känns förvirrande och att man gör det jobbigare för sig själv med dubbeljobb. Mycket enklare att skriva kod direkt i css.
+            if-sats känns onödig, likaså mixings och extend. Men partial kan vara nyttigt, allt blir så mcyket enklare att hitta och ha reda på.
+          
+        </p>
+        <div class="bilder">
+
+            <picture>
+                <source srcset="picture/lejon.jpg?as=avif&width=300" type="image/avif">
+                <source srcset="picture/lejon.jpg?as=webp&width=300" type="image/webp">
+                <source srcset="picture/lejon.jpg?width=300" type="image/avif">
+                <img class="responsive" src="picture/lejon.jpg" alt="Ett barn som skriver css-kod">
+            </picture>
+            </div>
+    </main>
+</body>
+<footer>
+
+    <p>&copy; Özgur Celik</p> <div id="klockan"></div>
+
+</footer>
+</body>
+
+</html>

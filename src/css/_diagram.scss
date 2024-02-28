@@ -1,0 +1,12 @@
+@use "base";
+
+#div-dia {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: base.$primary-font;
+    text-align: center;
+    color: base.$primary-pink;;
+}

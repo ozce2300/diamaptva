@@ -1,0 +1,291 @@
+@use "base";
+@use "keyframes";
+@use "diagram";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: base.$primary-font;
+}
+
+%margin-auto {
+    margin: 0 auto;
+}
+
+/* Design av Header */
+header {
+    height: 72px;
+    background-color: base.$primary-pink;
+    margin: 0;
+    position: relative;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+footer {
+background-color: base.$primary-pink-third;
+color: base.$primary-white;
+text-align: center;
+font-size: 1.1rem;
+@include base.size(100%);
+min-height: 20vh;
+@extend %margin-auto;
+padding-top: 10vh;
+margin-top: 40px;
+}
+
+.logo a {
+    color: base.$primary-white;
+    font-size: 0.8em;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Design av meny för mobilenheter, placeras till höger om skärmen */
+nav {
+    background-color: base.$primary-pink;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
+    font-size: 1.2em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    display: none;
+
+    ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    @extend %margin-auto;
+    padding: 0;}
+
+    li {
+    padding: 0.8em 0;
+    @include base.size(100%);
+
+    }
+
+    a   {
+    color: base.$primary-white ;
+    text-decoration: none;
+    padding: 0 1em;
+    } 
+
+    li:hover {
+    background-color: base.$primary-pink-secondery;
+    cursor: pointer;
+    text-decoration: underline white;
+    }
+}
+
+/* Meny knapp, öppna meny */
+.menu-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: base.$primary-pink;
+    border: white solid 2px;
+    cursor: pointer;
+}
+
+.open {
+    margin: 0 1em;
+}
+
+.menu-btn:hover {
+    background-color: base.$primary-pink-secondery;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
+}
+
+.menu-icon {
+    margin-right: 10px;
+}
+
+/* de tre svarta strecken (hamburg-icon) */
+.bars {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: base.$primary-white;
+    margin: 5px 0;
+}
+
+.menu-text {
+    font-size: 1.2em;
+    color: base.$primary-white;
+}
+
+/* Meny knapp, stäng */
+.close {
+    margin: 1em 1.5em;
+    padding: 10px 15px;
+
+}
+
+/* Roterar två lodräda streck, till ett kryss */
+.cross1 {
+    width: 25px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+}
+
+.cross2 {
+    width: 25px;
+    transform: rotate(135deg);
+    position: relative;
+    top: -3px;
+}
+
+/* Main content */
+main {
+    max-width: 600px;
+    width: 80%;
+    @extend %margin-auto;
+    font-size: 1.2em;
+}
+
+h2 {
+    padding: 1em 0;
+    text-align: center;
+}
+
+main p {
+    font-size: 1em;
+    line-height: 1.4em;
+    @extend .open;
+
+
+
+}
+
+.bilder {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    row-gap: 40px;
+    margin-top: 40px;
+}
+.responsive {
+    width: 100%;
+    height: auto;
+    @extend .open;
+
+  }
+
+/* Media querys */
+
+/* Större skärmas - gör menyn som inline */
+@media only screen and (min-width: 992px) {
+    header {
+        padding: 0 3em;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    #open-menu {
+        display: none !important;
+    }
+
+    header {
+        position: static;
+    }
+
+    nav {
+        display: block !important;
+        position: static;
+        box-shadow: 0 0px 0px;
+        height: auto;
+        font-size: 1.1em;
+        width: auto;
+     ul {
+        height: 100%;
+    }
+
+    li {
+        display: inline;
+        padding: 1.2em 0;
+    }
+}
+
+.responsive {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    
+  }
+
+  .bilder {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    row-gap: 40px;
+    margin-top: 40px;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+    body,header, footer, nav, .menu-btn  {
+        color: white;
+        background-color: grey;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        footer, .menu-btn:hover, nav li:hover  {
+            color: white;
+            background-color: darkgrey;
+            }
+        }
+
+.animation {
+    animation: vanstertillhoger 1s ease-out forwards;
+    z-index: -1;
+}
+
+.animation2 {
+    animation: vanstertillhoger 2s ease-out forwards;
+    z-index: -1;
+}
+
+
+
+.image:hover {
+    animation: rotera 4s infinite;
+    cursor: pointer;
+}
+
+#anim {
+    width: 100%;
+    margin: 5% auto;
+    text-align: center;
+
+}
+
+#btn {
+    color: base.$primary-white;
+    background-color: base.$primary-pink-third;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#boll {
+    margin: 5% auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: base.$primary-pink-secondery;
+}
+
+.hoppa {
+    animation: hoppa 2s linear infinite  ;
+
+}

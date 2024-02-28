@@ -1,0 +1,71 @@
+@use "base";
+#map { height: 400px; 
+  z-index: -1}
+
+
+#sok-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #sok-form label {
+    margin-right: 10px;
+    font-family: base.$primary-font;
+  }
+  
+  #stad-input {
+    padding: 8px;
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    transition: border-color 0.3s ease; 
+    flex-grow: 1;
+  }
+  
+  #sok-form button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    background-color: base.$primary-pink; 
+    color: base.$primary-white;
+    border: base.$primary-pink;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  #stad-input:hover {
+    border-color: base.$primary-pink-third;
+  }
+  
+  #sok-form button:hover {
+    background-color: base.$primary-pink-third; 
+  }
+
+  @media only screen and (max-width: 600px) {
+    #sok-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      #sok-form button {
+        padding: 8px 15px;
+        margin-left: 10px;
+        margin-top: 10px;
+        background-color: base.$primary-pink;
+        color: base.$primary-white;
+        border: base.$primary-pink;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: border-color 0.3s ease; 
+      }
+
+      #stad-input {
+        padding: 8px;
+        margin-top: 10px;
+        border: 2px solid #ccc; 
+        border-radius: 5px;
+        transition: border-color 0.3s ease; 
+        flex-grow: 1;
+      }
+  }

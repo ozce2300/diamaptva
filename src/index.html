@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS-preprocessor</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="js/main.js" type="module"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="index.html">CSS-preprocessor</a></h1>
+        <!-- Meny knapp för att öppna mobilmenyn-->
+        <button class="menu-btn open" id="open-menu">
+            <span class="menu-icon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+            <span class="menu-text">Meny</span>
+        </button>
+        <!-- navigering -->
+        <nav id="nav-menu">
+            <!-- Knapp som visas om mobilmenyn är utfälld -->
+            <button class="menu-btn close" id="close-menu">
+                <span class="menu-icon">
+                    <span class="bars cross1"></span>
+                    <span class="bars cross2"></span>
+                </span>
+                <span class="menu-text">Stäng</span>
+            </button>
+            <ul>
+                <li><a href="#">Startsida</a></li>
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="animation.html">Animation</a></li>
+                <li><a href="diagram.html">Diagram</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Ett Äventyr med SCSS: <br> En CSS-Preprocessor Berättelse</h2>
+        <p>
+        
+
+            Det var en gång i en digital värld där webbutvecklare ständigt kämpade med att skapa och underhålla stora webbapplikationer. 
+            Deras källkod var fylld med CSS-regler som spred sig över hundratals filer. Att hantera detta blev en utmaning, och att hålla koll på allt blev nästan omöjligt.<br>
+            
+            <br>Möt vår hjälte, en ung och ambitiös webbutvecklare vid namn Özgur. 
+            Özgur stod inför den ständiga utmaningen att organisera och underhålla CSS-koden för sitt senaste projekt, "Det Stora Äventyret på Webben". 
+            Han hade hört talas om en legendarisk lösning kallad SCSS, en mäktig CSS-preprocessor som sägs förenkla kodbasen och göra stylingen mer hanterbar.<br>
+            
+           <br> Özgur bestämde sig för att ta mod till sig och ge sig ut på sitt eget äventyr för att utforska SCSS-landet. 
+            Han började med att installera SCSS på sitt projekt och snart upptäckte han dess magiska krafter.<br>
+            <div class="bilder">
+
+            <picture>
+                <source srcset="picture/ozgur.jpg?as=avif&width=300" type="image/avif">
+                <source srcset="picture/ozgur.jpg?as=webp&width=300" type="image/webp">
+                <source srcset="picture/ozgur.jpg?width=300" type="image/avif">
+                <img class="responsive" src="picture/ozgur.jpg" alt="Ett barn som skriver css-kod">
+            </picture>
+            </div>
+
+            <br>Med SCSS kunde Özgur använda variabler för att lagra färger, typsnitt och andra stilattribut på ett ställe. 
+            Detta gjorde det enkelt att uppdatera utseendet på hela webbplatsen med bara några få ändringar. 
+            Genom att använda SCSS: s mixin-funktion kunde Özgur också skapa återanvändbara bitar av kod för vanliga stilar och animationer, 
+            vilket sparade honom massor av tid och minskade risken för upprepning.<br>
+            
+           <br> Men det fanns mer att upptäcka i SCSS-landet.
+            Özgur fann sig själv vandrande genom dess kraftfulla nesting-funktion, som tillät honom att organisera sin CSS-kod på ett hierarkiskt sätt, 
+            vilket gjorde den lättare att läsa och underhålla. <br>
+
+            <br>Med hjälp av nesting kunde Özgur också skapa mer specifika regler som bara tillämpades på vissa delar av webbplatsen, 
+            vilket gav honom en oöverträffad kontroll över utseendet och beteendet hos varje element.<br>
+            
+            <br>Under sitt äventyr stötte Özgur också på SCSS:s förmåga att importera filer, vilket gjorde det möjligt för honom att dela upp sin CSS-kod i mindre, 
+            mer hanterbara bitar. Detta gjorde det enkelt att organisera och återanvända kod, samtidigt som det höll hans projekt välstrukturerat och lätt att navigera.<br>
+            
+            <br>När Özgur fortsatte sitt äventyr insåg han att SCSS inte bara var en kraftfull CSS-preprocessor, utan också en vänlig följeslagare som hjälpte
+            honom att lösa problem och utforska nya idéer. Med SCSS vid hans sida kunde Özgur ta sig an vilket stylingutmaning som helst och skapa vackra, 
+            välstrukturerade webbplatser som lockade och förtrollade sina besökare.<br>
+            
+          <br>  Och så levde Özgur lycklig någonsin efter, tack vare SCSS, den magiska CSS-preprocessorn som förvandlade hans webbutvecklingsäventyr till 
+            en saga om framgång och kreativitet.<br>
+
+            <div class="bilder">
+            <picture>
+                <source srcset="picture/delfin.jpg?as=avif&width=300" type="image/avif">
+                <source srcset="picture/delfin.jpg?as=webp&width=300" type="image/webp">
+                <source srcset="picture/delfin.jpg?width=300" type="image/avif">
+                <img class="responsive" src="picture/delfin.jpg" alt="Ett barn som skriver css-kod">
+            </picture>
+            </div>
+            
+
+        </p>
+    </main>
+    <footer>
+
+        <p>&copy; Özgur Celik</p> <div id="klockan"></div>
+
+    </footer>
+</body>
+
+</html>
