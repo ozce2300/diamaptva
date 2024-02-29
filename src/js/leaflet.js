@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                     if (marker !== null) {
                         map.removeLayer(marker);
                     }
+                    
+                    marker = L.marker([latitude, longitude]).addTo(map);
 
                 } else {
                     console.error('Inga resultat hittades för söktermen:', searchTerm);
