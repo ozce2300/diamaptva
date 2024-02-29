@@ -589,6 +589,8 @@ document.addEventListener("DOMContentLoaded", async function() {
         maxZoom: 13,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+    // Skapa en variabel för att lagra den befintliga markören
+    let marker = null;
     let searchForm = document.getElementById("sok-form");
     searchForm.addEventListener("submit", async function(event) {
         event.preventDefault();
@@ -604,10 +606,10 @@ document.addEventListener("DOMContentLoaded", async function() {
                     latitude,
                     longitude
                 ], 13);
-                map.eachLayer(function(layer) {
-                    if (layer instanceof L.Marker) map.removeLayer(layer);
-                });
-                L.marker([
+                // Ta bort den befintliga markören om den finns
+                if (marker !== null) map.removeLayer(marker);
+                // Skapa en ny markör och spara referensen
+                marker = L.marker([
                     latitude,
                     longitude
                 ]).addTo(map);
